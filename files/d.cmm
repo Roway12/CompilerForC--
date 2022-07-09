@@ -1,0 +1,16 @@
+int m;
+void main(){
+  int a;
+  int b;
+  m = 5;
+  cout << "a: ";
+  cin >> a;
+  if ( m == a ) {
+    return;
+  }
+  b = 6;
+  cout<<b;
+  cout<<"\n";
+  a = b/a;
+  cout<<a;
+}

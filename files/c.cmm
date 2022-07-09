@@ -1,0 +1,11 @@
+int m;
+void main(){
+	int a;
+	a = 0;
+	m = 5;
+	while(m>a){
+		cout<<a;
+		cout<<"\n";
+		a++;
+	}
+}

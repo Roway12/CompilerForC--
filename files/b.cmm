@@ -1,0 +1,13 @@
+int m;
+void main(){
+	int a;
+	cout << "a: ";
+	cin >> a;
+	m = 2;
+	if(a>m){
+		cout<<"a is greater";
+	}
+	else{
+		cout<<"m is greater";
+	}
+}

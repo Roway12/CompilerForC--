@@ -1,0 +1,19 @@
+int max;
+
+void main() {
+    int a;
+    max = 10;
+    cout << "a: ";
+    cin >> a;
+    if ( a > 1 ) {
+        int b;
+        b = a - 1;
+        cout << "b = ";
+        cout << b;
+    }
+    else {
+        int b;
+        b = max + a;
+        cout << b;
+    }
+}

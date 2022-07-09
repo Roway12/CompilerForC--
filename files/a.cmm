@@ -1,0 +1,8 @@
+int m;
+void main(){
+	int a;
+	cin>>a;
+	m = 4;
+	m = m+a;
+	cout<<m;
+}
