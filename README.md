@@ -88,3 +88,56 @@ exit_main:
 	li    $v0, 10
 	syscall
 ```
+对变量的识别
+```
+int max[3](int x[0], int y[1]) {
+    int m[2];
+    if ((x[0] > y[1])) {
+        m[2] = x[0];
+    }
+    else {
+        m[2] = y[1];
+    }
+    return m[2];
+}
+
+void main[3]() {
+    int a[0];
+    int b[1];
+    int m[2];
+    cout << "a: ";
+    cin >> a[0];
+    cout << "b: ";
+    cin >> b[1];
+    m[2] = max[3](a[0], b[1]);
+    cout << "max = ";
+    cout << m[2];
+    cout << "\n";
+}
+```
+编译失败，抛出语法错误
+```
+int max(int x, int y) {
+  if ( x + y ) { // 2:8 ***ERROR*** Non-bool expression used as an if condition
+    return x;
+  }
+  else {
+    return y;
+  }
+}
+
+void main() {
+  int a;
+  bool b;
+  int m;
+  
+  cout << "a: ";
+  cin >> a;
+  cout << "b: ";
+  cin >> b;
+  
+  m = max(a,b); // 20:13 ***ERROR*** Type of actual does not match type of formal
+  cout << "the maximum is ";
+  cout << m;
+}
+```
